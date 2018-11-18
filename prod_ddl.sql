@@ -1,4 +1,4 @@
-CREATE TABLE `grd_rfid`.`users` ( 
+CREATE TABLE `graphics_grd_rfid`.`users` ( 
         `id` INT NOT NULL AUTO_INCREMENT , 
         `first_name` VARCHAR (30) NOT NULL , 
         `userid` VARCHAR (30) DEFAULT NULL ,
@@ -18,7 +18,7 @@ INSERT INTO users ( `first_name`,`user_type`, `no_of_vehicles`, `created_at`, `c
 INSERT INTO users ( `first_name`,`user_type`, `userid`, `password`, `created_at`, `created_by`) VALUES
         ('John', 'SECURITY', 'security1', 'security1', '2018-10-05 00:00:00', '0');
 
-CREATE TABLE grd_rfid.vehicles (
+CREATE TABLE graphics_grd_rfid.vehicles (
         id INT NOT NULL AUTO_INCREMENT, 
         user_id INT NOT NULL, 
         rfid VARCHAR (30) NOT NULL, 
@@ -30,7 +30,7 @@ CREATE TABLE grd_rfid.vehicles (
 ) ENGINE = InnoDB;
 
 
-CREATE TABLE grd_rfid.in_out_entry(
+CREATE TABLE graphics_grd_rfid.in_out_entry(
         id INT NOT NULL AUTO_INCREMENT,
         gate_keeper_id INT NOT NULL, 
         reader_id INT NOT NULL,

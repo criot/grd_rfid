@@ -1,7 +1,7 @@
 <?php
-    header('Access-Control-Allow-Origin: *');
 
     include 'connection.php';
+    
     $id = $_GET['id'];
 
     $query = "SELECT * FROM users WHERE id = ".$id;
@@ -13,8 +13,8 @@
     while($row = mysqli_fetch_row($res)) {
         $row_array['id']= $row[0];
         $row_array['name']= $row[1];
-        $row_array['designation']= $row[2];
-        $row_array['fromDate']= $row[3];
+        $row_array['userType']= $row[4];
+        $row_array['noOfVehicles']= $row[5];
     }
 
     echo json_encode($row_array);

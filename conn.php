@@ -1,11 +1,5 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
-
-header("Access-Control-Allow-Methods: OPTIONS, GET, POST");
-header("Access-Control-Allow-Headers: *");
-
 $servername = "localhost";
 $username = "root";
 $password = "";
